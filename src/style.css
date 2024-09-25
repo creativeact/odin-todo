@@ -1,0 +1,96 @@
+:root {
+    --primary-color: maroon;
+    --secondary-color: lightgrey;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+   
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 25vw auto;
+    height: 100%;
+}
+
+svg {
+    height: 35px;
+    width: 35px;
+}
+
+#left {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-rows: 10vh auto;
+    background-color: var(--secondary-color);
+    padding-left: 10px;
+}
+
+#right {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 10vh auto;
+}
+
+#left-top, #right-top {
+    grid-row: 1 / 2;
+}
+
+/* Left top section */
+#left-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+#profile {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#menu > * {
+    padding: 10px;
+}
+
+#profile-circle {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* Left Main */
+#task-commands {
+    display: flex;
+    align-items: center;
+}
+
+#new-task-button {
+    background-color: transparent;
+    border: none;
+    transition: transform .2s ease-in-out;
+}
+#new-task-button:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+
+/* Right */
+#right-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

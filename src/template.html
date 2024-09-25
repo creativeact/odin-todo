@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin To Do</title>
+</head>
+<body>
+    <div id="main">
+        <div id="left">
+            <div id="left-top">
+                <div id="profile">
+                    <svg id="profile-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><title>account-circle</title><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" /></svg>
+                    <h3>Michael Jordan</h3>
+                </div>
+                <div id="menu">
+                    <svg id="notification" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><title>bell</title><path d="M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21" /></svg>
+                    <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><title>menu-open</title><path d="M21,15.61L19.59,17L14.58,12L19.59,7L21,8.39L17.44,12L21,15.61M3,6H16V8H3V6M3,13V11H13V13H3M3,18V16H16V18H3Z" /></svg>
+                </div> 
+            </div>
+            <div id="task-commands">
+                <h2>New Task</h2>
+                <button id="new-task-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><title>plus-circle-outline</title><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" /></svg>
+                </button>
+
+                <form id="task-form">
+                    <div class="form-item">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="due-date">Due Date</label>
+                        <input type="date" id="due-date" name="due-date">
+                    </div>
+                    <div class="form-item">
+                        <label for="priority">Priority</label>
+                        <select id="priority" name="priority">
+                            <option value="" selected disabled hidden>Select</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <label for="notes">Notes</label>
+                        <textarea name="notes" id="notes" rows="5" cols="25"></textarea>
+                    </div>
+                    <button type="sumbit" id="add-task-button">Add Task</button>
+                </form>
+
+            </div>
+            <div id="projects">
+                <h2>My Projects</h2>
+
+            </div>
+
+        </div>
+        <div id="right">
+            <div id="right-top">
+                <h1>Just Do It</h1>
+            </div>
+            <div id="project-header">
+                <h2 id="project-title"></h2>
+            </div>
+            <div id="task-view">
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
