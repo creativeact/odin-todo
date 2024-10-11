@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
+    <title>TaskHero</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div id="main">
+        <div id="left">
+            <div id="left-top">
+                <div id="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -960 960 960" fill="white"><path d="M762-96 645-212l-88 88-28-28q-23-23-23-57t23-57l169-169q23-23 57-23t57 23l28 28-88 88 116 117q12 12 12 28t-12 28l-50 50q-12 12-28 12t-28-12m118-628L426-270l5 4q23 23 23 57t-23 57l-28 28-88-88L198-96q-12 12-28 12t-28-12l-50-50q-12-12-12-28t12-28l116-117-88-88 28-28q23-23 57-23t57 23l4 5 454-454h160zM334-583l24-23 23-24-23 24zm-56 57L80-724v-160h160l198 198-57 56-174-174h-47v47l174 174zm92 199 430-430v-47h-47L323-374zm0 0-24-23-23-24 23 24z"/></svg>
+                    <h1 id="task-hero">TaskHero</h1>
+                </div>
+                <button id="sidebar-toggle">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 5V19M6 8H8M6 11H8M6 14H8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </button>
+            </div>
+            <div id="task-section">
+                <div id="add-task-container">
+                    <button id="add-task-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><title>plus-circle-outline</title><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" /></svg>
+                    </button>
+                    <h2>Add Task</h2>  
+                </div>
+
+                <form id="task-form">
+                    <input type="text" placeholder="Title" id="title" name="title" maxlength="20" required>
+                    <textarea name="description" placeholder="Description (optional)" id="description" maxlength="200" rows="5" cols="25"></textarea>
+                    <input type="date" id="due-date" name="due-date" required>
+                    <select id="priority" name="priority" required>
+                        <option value="" selected disabled hidden>Priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <select id="project" name="project">
+                    </select>
+                    <button type="button" id="cancel-add-task">Cancel</button>
+                    <button type="sumbit" id="add-task-button">Add</button>
+                </form>
+
+            </div>
+            <div id="project-section">
+                <h2 id="my-projects">My Projects</h2>
+                <div id="project-list">
+                    <div id="add-project-container">
+                        <button id="add-project-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><title>plus-circle-outline</title><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" /></svg>
+                        </button>
+                        <h2>Add Project</h2>  
+                    </div>
+
+                    <form id="project-form">
+                        <input type="text" id="project-name" placeholder="Project Name" maxlength="17" name="title" required>
+                        <button type="button" id="cancel-add-project">Cancel</button>
+                        <button type="submit" id="submit-add-project">Add</button>
+                    </form>
+
+                </div>
+            </div>
+          
+        </div>
+        <div id="right">
+            <div id="right-top">
+                <div id="profile-greeting">
+                    <svg id="profile-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><title>account-circle</title><path d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" /></svg>
+                    <h3 id="hello">Hello, Link</h3>
+                </div>
+            </div>
+            <h1 id="current-project-title">My Project #1</h1>
+            <div class="task-list"></div>
+        </div>
+    </div>
+
+</body>
+</html>
